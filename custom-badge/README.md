@@ -22,8 +22,10 @@ We need another few steps in our `workflow.yml`, **before** the steps that push 
 - name: Generate the badge from the json-summary
   run: node generate-coverage-badge.js coverage/coverage-summary.json
 
-- name: Copy the badge to the correct location
-  run: cp coverage-badge.svg static-build/
+- name: Move HTML report and badge to the correct location
+  run: |
+    mv coverage/lcov-report static-build
+    mv coverage-badge.svg static-build/
 ```
 
 Then add the provided [generate-coverage-badge.js](generate-coverage-badge.js)
