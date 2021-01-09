@@ -7,7 +7,7 @@ This is an example GitHub Action workflow that will automatically push all files
 - Publish static (gatsby, jekyll etc.) site to separate GitHub repository
 - Publish build results to a web endpoint
 - Publish istanbul test coverage from unit/integration tests
-- Publish a custom badge based on [shields.io](https://shields.io) (e.g a test coverage badge)
+- Publish a custom badge like [shields.io](https://shields.io) (e.g a test coverage badge)
 
 ## Why?
 
