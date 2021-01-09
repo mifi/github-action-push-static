@@ -12,6 +12,7 @@ This is an example GitHub Action workflow that will automatically push all files
 ## Why?
 
 - Free serving of public websites with git history (public repositories don't cost anything)
+- Don't have to pay for services like `codecov.io` or `coveralls.io`
 - Don't bloat your main repo with a long history of ever changing files.
 - Don't risk exposing any personal github token from a github action (a leak which which could give someone access to your whole GitHub account).
 
@@ -79,7 +80,7 @@ jobs:
           git push
 ```
 
-In the same (source) repository go to the GitHub Settings > Secrets menu and create a new repository secret. In this example, we'll call it SSH_PRIVATE_KEY. Put the contents of the private SSH key you generated before (`id_rsa` file) into the contents field. This key should start with `-----BEGIN ... PRIVATE KEY-----`, consist of many lines and ends with `-----END ... PRIVATE KEY-----`.
+In the same (source) repository go to the GitHub `Settings` > `Secrets` menu and create a new repository secret. In this example, we'll call it `SSH_PRIVATE_KEY`. Put the contents of the private SSH key you generated before (`id_rsa` file) into the contents field. This key should start with `-----BEGIN ... PRIVATE KEY-----`, consist of many lines and ends with `-----END ... PRIVATE KEY-----`.
 
 ## Finish up
 

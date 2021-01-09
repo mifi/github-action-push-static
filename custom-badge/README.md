@@ -7,12 +7,13 @@ Example badge:
 ![](example.svg)
 
 You need to run this setup to your source repo:
+
 ```bash
-yarn init
-yarn add badge-maker
+yarn init # Optional
+yarn add -D badge-maker
 ```
 
-We need another few steps in our `workflow.yml`, before the steps that push to the destination repo. This example will use jest to create a coverage report and then generate an SVG:
+We need another few steps in our `workflow.yml`, **before** the steps that push to the destination repo. This example will use jest to create a coverage report and then generate an SVG:
 
 ```yml
 - name: Create JEST coverage
@@ -22,7 +23,7 @@ We need another few steps in our `workflow.yml`, before the steps that push to t
   run: node generate-coverage-badge.js coverage/coverage-summary.json
 
 - name: Copy the badge to the correct location
-  run: cp coverage-badge.svg static-files-destination/
+  run: cp coverage-badge.svg static-build/
 ```
 
 Then add the provided [generate-coverage-badge.js](generate-coverage-badge.js)
