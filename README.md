@@ -89,7 +89,7 @@ Now commit and push your files in the source repository and check that the GitHu
 https://your-username.github.io/static-files-destination-repo/
 ```
 
-## Custom GitHub badge
+## Custom GitHub badge ![](custom-badge/example.svg)
 
 See [custom-badge/](custom-badge/)
 
