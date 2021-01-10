@@ -63,7 +63,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
-          repository: repository: your-username/static-files-destination-repo # *** REPLACE WITH YOUR OWN ***
+          repository: your-username/static-files-destination-repo # *** REPLACE WITH YOUR OWN ***
           path: static-files-destination
 
       # Now we will copy/replace all files in the cloned destination folder, and finally push the changes:
